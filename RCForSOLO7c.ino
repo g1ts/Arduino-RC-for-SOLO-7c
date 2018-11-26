@@ -46,7 +46,7 @@ void loop() {
             irsend.sendNEC(0x807F20DF, 32);
             break;
         case 0x40: // 10 - pwrBtn
-            irsend.sendNEC(0x807FC0F, 32);
+            irsend.sendNEC(0x807FC00F, 32);
             break;
         default:
             Serial.println("1 - mute");
