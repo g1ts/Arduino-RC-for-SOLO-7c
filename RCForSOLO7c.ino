@@ -45,12 +45,16 @@ void loop() {
         case 0x39: // 9 - inputBtn
             irsend.sendNEC(0x807F20DF, 32);
             break;
+        case 0x40: // 10 - pwrBtn
+            irsend.sendNEC(0x807FC0F, 32);
+            break;
         default:
             Serial.println("1 - mute");
             Serial.println("2 - vup \t3 - vdown");
             Serial.println("4 - tup \t5 - tdown");
             Serial.println("6 - bup \t7 - bdown");
             Serial.println("8 - reset\t9 - input");
+            Serial.println("10 - pwr");
             break;
     }
     Serial.println("ok");
